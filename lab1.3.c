@@ -1,32 +1,30 @@
 #include <stdio.h>
 
 int main() {
-    int number1, number2, operationCode, result;
+    int num1, num3, opt, result;
 
-    printf("Enter your number: \n");
-  
-    if (scanf("%d %d %d", &number1, &number2, &operationCode) != 3) {
+    if (scanf("%d %d %d", &num1, &num3, &opt) != 3) {
         return 1; 
     }
-    if (operationCode == 1) {
-        result = number1 + number2;
+    if (opt == 1) {
+        result = num1 + num3;
         printf("Result: %d\n", result);
-    } else if (operationCode == 2) {
-        result = number1 - number2;
+    } else if (opt == 2) {
+        result = num1 - num3;
         printf("Result: %d\n", result);
-    } else if (operationCode == 3) {
-        result = number1 * number2;
+    } else if (opt == 3) {
+        result = num1 * num3;
         printf("Result: %d\n", result);
-    } else if (operationCode == 4) {
-        if (number2 != 0) {
-            result = number1 / number2;
+    } else if (opt == 4) {
+        if (num3 != 0) {
+            result = num1 / num3;
             printf("Result: %d\n", result);
         } else {
-            printf("Error: Division by zero\n");
+            printf("Error\n");
         }
     } else {
-        printf("Invalid operation code\n");
-    }
+        printf("Invalid operation\n");
+    }//End if-else
 
     return 0;
 }
