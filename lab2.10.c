@@ -21,12 +21,12 @@ int main() {
         printf("--- Month %d ---\n", i);
 
         switch (cmdCode) {
-            case 1: // ฝากเงิน
+            case 1: 
                 currentBalance += amount;
                 printf("Deposit: %.2f\n", amount);
                 break;
 
-            case 2: // ถอนเงิน
+            case 2: 
                 if (amount <= currentBalance) {
                     currentBalance -= amount;
                     printf("Withdrawal: %.2f\n", amount);
@@ -37,7 +37,7 @@ int main() {
                 }
                 break;
 
-            case 3: { // คิดดอกเบี้ย
+            case 3: {
                 float apr;
                 if (currentBalance < 1000.0)
                     apr = 1.0;
