@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct Product {
+    char name[50]; 
+    int productId;      
+    float price;        
+};
+
+int main() {
+    struct Product item;
+   
+    printf("Enter product ID, price, and name: ");
+    if (scanf("%d %f %s", &item.productId, &item.price, item.name) != 3) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    printf("\nProduct Information:\n");
+    printf("ID: %d\n", item.productId);
+    printf("Price: %.2f\n", item.price);
+    printf("Name: %s\n", item.name);
+
+    return 0;
+}
