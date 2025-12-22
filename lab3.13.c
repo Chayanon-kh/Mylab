@@ -2,7 +2,7 @@
 #include <ctype.h>   
 
 int main() {
-    char text[101];   
+    char text[101];
     int countUpper = 0;
     int countLower = 0;
     int countDigit = 0;
@@ -11,9 +11,10 @@ int main() {
 
 
     if (fgets(text, sizeof(text), stdin) == NULL) {
-        return 1; 
+        return 1;
+    }
 
-   
+  
     for (i = 0; text[i] != '\0'; i++) {
         if (isupper(text[i])) {
             countUpper++;
@@ -21,11 +22,12 @@ int main() {
             countLower++;
         } else if (isdigit(text[i])) {
             countDigit++;
-        } else if (text[i] != '\n') {  
+        } else if (text[i] != '\n') { 
             countOther++;
         }
     }
 
+ 
     printf("Uppercase: %d\n", countUpper);
     printf("Lowercase: %d\n", countLower);
     printf("Digits: %d\n", countDigit);
