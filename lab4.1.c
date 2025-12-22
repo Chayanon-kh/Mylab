@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int N;          
+    int i;          
+
+
+    scanf("%d", &N);
+    int numbers[N];
+    for (i = 0; i < N; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (i = N - 1; i >= 0; i--) {
+        printf("%d\n", numbers[i]);
+    }
+    return 0;
+}
